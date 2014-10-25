@@ -4,9 +4,12 @@ Good for avatars and such!
 
 Transforms the lowly file input field into sophisticated looking drag-and-drop targets complete with a preview image and placeholder text.
 
+*  Home page: https://github.com/iamnan/imagedrop
+*  Demo: http://iamnan.github.io/imagedrop
+
 Actually, it's nothing fancy, but very effective. ImageDrop employs a little CSS trickery to change the  file input field into a drop zone.
 
-A tiny bit of javascript validate the file type is an image and uses the parent div for an image preview. The javascript changes the parent's background image when a file is dropped on the input.
+A tiny bit of javascript validates the file type and generates the image preview by updating the the parent element's background-image with the image dropped on the input field.
 
 During dragging and dropping, another div (sibling to the input) is temporarily revealed to act as a placeholder. This is also done purely with CSS.
 
@@ -19,7 +22,7 @@ So the html structure in the form looks like this:
 
 ## Requirements/Compatibility
 
-ImageDrop uses simple CSS that is compatible with all browsers back to IE8. Correct me if I'm wrong about that. It also uses the browser's FileReader API through javascript, and that is compatible with most everything.
+ImageDrop uses simple CSS that is compatible with all browsers back to IE8. (Create a github issue if you find I'm wrong about that.) It also uses the browser's FileReader API through javascript, and that is compatible with most everything. So, the requirements are:
 
 * Jquery (whatever version)
 * Uh, that's it...
@@ -27,9 +30,9 @@ ImageDrop uses simple CSS that is compatible with all browsers back to IE8. Corr
 ## Features
 * It's small. (Just 989 characters of javascript.)
 * Works with a *lot* of browsers; [most browsers](http://caniuse.com/#search=FileReader) in fact.
-* Supports a live preview image before bugging the server about it.
+* Supports a live image preview on the client-side, no bugging the server about it.
 * Supports placeholder text and/or images (for drag operations).
-* Validates the file type before bugging the server with it.
+* Validates the file type before on the client-side, no bugging the server about that either.
 * Can be integrated into any web framework, not just Rails although this gem is mostly for Rails.
 * Plays nice with Bootstrap.
 

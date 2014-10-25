@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["dgerton@gmail.com"]
   spec.summary       = %q{Good for avatars and such!}
   spec.description   = %q{Transforms the lowly file input field into a sophisticated looking drag and drop target, complete with preview image and placeholder text.}
-  spec.homepage      = "https://github.com/IAmNaN/imagedrop"
+  spec.homepage      = "http://iamnan.github.io/imagedrop"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

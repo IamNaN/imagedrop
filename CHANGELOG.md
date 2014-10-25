@@ -1,3 +1,7 @@
+### v0.0.4
+* Add reference to the demo page
+* Minor updated to the readme file
+
 ### v0.0.3
 * Changes to readme file
 
