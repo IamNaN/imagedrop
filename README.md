@@ -37,7 +37,7 @@ ImageDrop uses simple CSS that is compatible with all browsers back to IE8. Corr
 
 Be sure to already have jquery in your project and then add this line to your application's Gemfile:
 
-    gem 'image-drop'
+    gem 'imagedrop'
 
 And then execute:
 
@@ -45,18 +45,18 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install image-drop
+    $ gem install imagedrop
 
 In your application.js add:
 
-    //= require image-drop
+    //= require imagedrop
 
 And your application.css add:
 
-    *= require image-drop
-    *= require image-drop_sample // optional
+    *= require imagedrop
+    *= require imagedrop_sample // optional
 
-`image-drop_sample.css.scss` is a good looking example, but it's just there to give you an idea of how you might style the ImageDrop. I guess you could call this the theme file_field. 
+`imagedrop_sample.css.scss` is a good looking example, but it's just there to give you an idea of how you might style the ImageDrop. I guess you could call this the theme file_field. 
 
 ## Usage
 
@@ -93,7 +93,7 @@ Obviously, your version will be a little different.
 
 The same HTML structure expectation applies whether inside or outside of Rails (so check that out above). You can extract the coffeescript file from this repo and convert it to vanilla javascript at [js2coffee.org](http://js2coffee.org) kindly written and hosted by [Rico Sta Cruz](http://ricostacruz.com/).
 
-The SCSS stylesheet, both of them, can be converted to whitebread CSS at [SASSMeister](http://sassmeister.com/) brilliantly offered by (Jed Foster)[http://jedfoster.com/] and (Dale Sande)[http://www.dalesande.com/].
+The SCSS stylesheet, both of them, can be converted to whitebread CSS at [SASSMeister](http://sassmeister.com/) brilliantly offered by [Jed Foster](http://jedfoster.com/) and [Dale Sande](http://www.dalesande.com/).
 
 ## Alternatives
 
@@ -105,7 +105,7 @@ This may not be enough for your purposes. You might need to drop multiple files,
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/image-drop/fork )
+1. Fork it ( https://github.com/[my-github-username]/imagedrop/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

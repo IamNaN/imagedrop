@@ -1,3 +1,6 @@
+### v0.0.3
+* Changes to readme file
+
 ### v0.0.2
 * Changes to readme file
 * Add changelog
