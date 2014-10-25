@@ -68,20 +68,27 @@ ImageDrop expects a loose html structure. Just wrap the input field with a div. 
 
 The input field may have an optional sibling div to act as the placeholder text. Here is an example:
 
-    <div id='avatar' style='background-image: url(<%= asset_path @user.avatar_url %>)'>
+    <div id='avatar-parent' style='background-image: url(<%= @user.avatar_image %>)'>
       <div class='placeholder'>Drop an image here</div>
       <%= f.file_field :avatar %>
     </div>
 
-This ERB uses the rails asset_path method to preload the avatar image should one already exist.
-
-`div.placeholder` just contains a small snippet of text. The class name is not necessary but may be so if you need to style your placeholder. The placeholder may contain any content you wish but does not accept mouse and keyboard input.
-
-Finally, initialize the image-drop by adding this to one of the js/coffeescript files in your project:
-
-    jQuery ->
-      avatar = new ImageDrop '#avatar'
+`div.placeholder` contains a small snippet of text in this example. It may contain any content you wish but does not accept mouse and keyboard input. The class name is not necessary, I'm just using it here for clarity. 
       
+In this example, I'm using an `avatar_image` method from my code that provides the path to the user's image or a default image if one doesn't exist. You could do something similar. In a view helper add a function:
+
+    def avatar_image(@user)
+      asset_path
+        @user.new_record? || @user.avatar_url.blank? ?
+        'default.jpg' : @user.avatar_url
+    end
+
+And then call it like this:
+
+    <div style='background-image: url(<%= avatar_image(@user) %>)'>
+
+Obviously, your version will be a little different.
+
 ### Outside of Rails
 
 The same HTML structure expectation applies whether inside or outside of Rails (so check that out above). You can extract the coffeescript file from this repo and convert it to vanilla javascript at [js2coffee.org](http://js2coffee.org) kindly written and hosted by [Rico Sta Cruz](http://ricostacruz.com/).
@@ -90,7 +97,9 @@ The SCSS stylesheet, both of them, can be converted to whitebread CSS at [SASSMe
 
 ## Alternatives
 
-There are alternatives to ImageDrop. I wanted to keep things small and very simple. While experimenting, I found a cool way to let CSS do the heavy lifting. That may not be enough for your purposes. You might need to drop multiple files onto the same control, realtime back-end processing, or to display upload progress. Here are some:
+There are alternatives to ImageDrop. While experimenting, I found a cool way to let CSS do the heavy lifting. I want to keep things small and very simple.
+
+This may not be enough for your purposes. You might need to drop multiple files, do realtime back-end processing, display upload progress, etc. Here are some alternatives:
 
 * [jQuery File Upload](http://blueimp.github.io/jQuery-File-Upload/) 
 
