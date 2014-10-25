@@ -1,0 +1,27 @@
+*[data-imagedrop] {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+*[data-imagedrop] div {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+*[data-imagedrop] input[type='file'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+}
+*[data-imagedrop].dragging div {
+  opacity: 1;
+}
