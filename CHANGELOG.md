@@ -1,3 +1,6 @@
+### v0.0.5
+* Fixed a centering problem in Safari
+
 ### v0.0.4
 * Add reference to the demo page
 * Minor updated to the readme file
