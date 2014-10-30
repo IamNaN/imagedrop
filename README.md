@@ -71,7 +71,7 @@ ImageDrop expects a loose html structure. Just wrap the input field with a div. 
 
 The input field may have an optional sibling div to act as the placeholder text. Here is an example:
 
-    <div id='avatar-parent' style='background-image: url(<%= @user.avatar_image %>)'>
+    <div data-imagedrop style='background-image: url(<%= @user.avatar_image %>)'>
       <div class='placeholder'>Drop an image here</div>
       <%= f.file_field :avatar %>
     </div>
