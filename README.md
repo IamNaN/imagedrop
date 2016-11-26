@@ -59,7 +59,7 @@ And your application.css add:
     *= require imagedrop
     *= require imagedrop_sample // optional
 
-`imagedrop_sample.css.scss` is a good looking example, but it's just there to give you an idea of how you might style the ImageDrop. I guess you could call this the theme file_field. 
+`imagedrop_sample.scss` is a good looking example, but it's just there to give you an idea of how you might style the ImageDrop. I guess you could call this the theme file_field. 
 
 ## Usage
 
